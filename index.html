@@ -19,50 +19,50 @@
   h1{font-family:var(--serif);font-style:italic;font-size:clamp(28px,5vw,46px);color:#fff;font-weight:400;line-height:1.1;margin-bottom:4px}
   h1 span{color:var(--accent)}
   .subtitle{font-size:11px;color:var(--muted);margin-top:6px;letter-spacing:.15em}
-  .card{width:100%;max-width:780px;background:var(--panel);border:1px solid var(--border);padding:28px;margin-bottom:20px;border-radius:4px}
-  .section-label{font-size:9px;letter-spacing:.25em;text-transform:uppercase;color:var(--muted);margin-bottom:6px}
-  .field-row{display:flex;align-items:center;gap:6px;padding:6px 0;border-bottom:1px solid var(--border)}}
+  .card{width:100%;max-width:780px;background:var(--panel);border:1px solid var(--border);padding:26px;margin-bottom:18px;border-radius:4px}
+  .section-label{font-size:9px;letter-spacing:.25em;text-transform:uppercase;color:var(--muted);margin-bottom:5px}
+  .field-row{display:flex;align-items:center;gap:6px;padding:5px 0;border-bottom:1px solid #282530}}
   .field-row:last-child{border-bottom:none}
-  .field-label{font-size:9px;letter-spacing:.15em;text-transform:uppercase;color:var(--muted);min-width:70px}
-  .value-display{font-family:var(--serif);font-style:italic;font-size:14px;color:var(--text);flex:1;padding:3px 8px;border:1px solid var(--border2);border-radius:2px;background:#0a080c;min-height:26px;display:flex;align-items:center}
-  .dropdown-trigger{background:transparent;border:1px solid var(--border2);color:var(--muted);padding:1px 7px;font-size:11px;cursor:pointer;border-radius:2px;transition:all .15s}
+  .field-label{font-size:9px;letter-spacing:.15em;text-transform:uppercase;color:var(--muted);min-width:68px}
+  .value-display{font-family:var(--serif);font-style:italic;font-size:14px;color:var(--text);flex:1;padding:2px 7px;border:1px solid #282530;border-radius:2px;background:#0a080c;min-height:24px;display:flex;align-items:center}
+  .dropdown-trigger{background:transparent;border:1px solid #282530;color:var(--muted);padding:0 6px;font-size:11px;cursor:pointer;border-radius:2px;transition:all .15s}
   .dropdown-trigger:hover{border-color:var(--accent);color:var(--accent)}
   .field-controls{display:flex;gap:2px}
-  .reroll-btn,.lock-btn{background:transparent;border:none;color:var(--muted);font-size:13px;cursor:pointer;padding:3px 5px;opacity:0.75;transition:all .15s}
+  .reroll-btn,.lock-btn{background:transparent;border:none;color:var(--muted);font-size:13px;cursor:pointer;padding:2px 4px;opacity:0.8;transition:all .15s}
   .reroll-btn:hover,.lock-btn:hover{color:var(--accent);opacity:1}
   .lock-btn.locked{color:#f9a8d4;opacity:1}
-  .divider{border:none;border-top:1px solid var(--border);margin:14px 0}
-  .prompt-label{font-size:9px;letter-spacing:.2em;text-transform:uppercase;color:var(--muted);margin-bottom:5px}
-  .prompt-textarea{width:100%;background:#0a080c;border:1px solid var(--border2);color:var(--muted);font-family:var(--mono);font-size:11px;line-height:1.8;padding:9px;resize:vertical;min-height:90px}
-  .btn{background:transparent;border:1px solid var(--border2);color:var(--muted);padding:7px 13px;font-size:10px;letter-spacing:.15em;text-transform:uppercase;cursor:pointer;font-family:var(--mono);transition:all .2s;border-radius:2px}
+  .divider{border:none;border-top:1px solid var(--border);margin:12px 0}
+  .prompt-label{font-size:9px;letter-spacing:.2em;text-transform:uppercase;color:var(--muted);margin-bottom:4px}
+  .prompt-textarea{width:100%;background:#0a080c;border:1px solid var(--border2);color:var(--muted);font-family:var(--mono);font-size:11px;line-height:1.8;padding:8px;resize:vertical;min-height:85px}
+  .btn{background:transparent;border:1px solid var(--border2);color:var(--muted);padding:6px 12px;font-size:10px;letter-spacing:.15em;text-transform:uppercase;cursor:pointer;font-family:var(--mono);transition:all .2s;border-radius:2px}
   .btn:hover{border-color:var(--accent);color:var(--accent)}
   .btn-primary{background:#f9a8d4;color:#0c0b0e;font-weight:600;border:none}
   .btn-primary:hover{background:#f472b6}
-  footer{margin-top:14px;font-size:9px;color:var(--dim);letter-spacing:.2em;text-align:center}
+  footer{margin-top:12px;font-size:9px;color:var(--dim);letter-spacing:.2em;text-align:center}
 </style>
 </head>
 <body>
 
 <header>
-  <div class="eyebrow">Cute Style Series / Experimental v2</div>
+  <div class="eyebrow">Cute Style Series / Experimental v3</div>
   <h1>Cute Style <span>Architect</span></h1>
-  <div class="subtitle">ランダム ＋ 手動選択（▼ボタン + ロック対応）</div>
+  <div class="subtitle">ランダム ＋ 手動選択（左寄せドロップダウン）</div>
 </header>
 
 <div class="card">
   <!-- Background -->
-  <div class="section-label">🎀 かわいい背景（ロック対応）</div>
+  <div class="section-label">🎀 かわいい背景</div>
   <div id="backgroundFields"></div>
-  <div class="btn-row" style="margin-top:6px">
+  <div class="btn-row" style="margin-top:4px">
     <button class="btn" onclick="randomAllBackground()">RANDOM ALL BG</button>
   </div>
 
   <hr class="divider">
 
   <!-- Fashion -->
-  <div class="section-label">👗 かわいいファッション（ロック対応）</div>
+  <div class="section-label">👗 かわいいファッション</div>
   <div id="fashionFields"></div>
-  <div class="btn-row" style="margin-top:6px">
+  <div class="btn-row" style="margin-top:4px">
     <button class="btn" onclick="randomAllFashion()">RANDOM ALL FASHION</button>
   </div>
 
@@ -77,7 +77,7 @@
 </div>
 
 <footer>
-  © 2026 Cute Style Series — Experimental (Lock + ▼ Button)
+  © 2026 Cute Style Series — Experimental (Left Dropdown)
 </footer>
 
 <script>
@@ -144,12 +144,12 @@ function renderBackgroundFields() {
 function showDropdown(key, type, triggerBtn) {
   const data = type === 'background' ? KAWAII_BG[key] : CUTE_FASHION[key];
   const list = document.createElement('div');
-  list.style.cssText = 'position:absolute;background:#131118;border:1px solid #332f40;border-radius:3px;padding:4px 0;max-height:260px;overflow:auto;z-index:9999;box-shadow:0 4px 12px rgba(0,0,0,0.4);min-width:240px';
+  list.style.cssText = 'position:absolute;background:#131118;border:1px solid #332f40;border-radius:3px;padding:4px 0;max-height:260px;overflow:auto;z-index:9999;box-shadow:0 4px 12px rgba(0,0,0,0.4);min-width:230px';
 
   data.forEach(option => {
     const item = document.createElement('div');
     item.textContent = option;
-    item.style.cssText = 'padding:6px 14px;font-size:12px;cursor:pointer;color:#d4cee0';
+    item.style.cssText = 'padding:5px 12px;font-size:12px;cursor:pointer;color:#d4cee0';
     item.onmouseover = () => item.style.background = '#1a1720';
     item.onmouseout = () => item.style.background = 'transparent';
     item.onclick = () => {
@@ -162,10 +162,10 @@ function showDropdown(key, type, triggerBtn) {
     list.appendChild(item);
   });
 
-  // Position below the button
+  // Left-aligned positioning (overlap OK)
   const rect = triggerBtn.getBoundingClientRect();
-  list.style.top = (rect.bottom + window.scrollY + 6) + 'px';
-  list.style.left = (rect.left + window.scrollX) + 'px';
+  list.style.top = (rect.bottom + window.scrollY + 5) + 'px';
+  list.style.left = (rect.left + window.scrollX - 80) + 'px';  // shift left
 
   document.body.appendChild(list);
 
